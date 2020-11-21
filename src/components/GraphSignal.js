@@ -6,6 +6,7 @@ export default function Chart({ height, color, className, data, label, warning }
 
   const [webglp, setWebglp] = useState(null);
   const [lineObj, setLineObj] = useState(null);
+  const [count, setCount] = useState(0);
 
   const numPoints = 5000;
 
@@ -37,7 +38,11 @@ export default function Chart({ height, color, className, data, label, warning }
         line.setY(i, yPos);
       }
       line.setY(xPos, yPos);
-      webglp.update();
+      setCount(count + 1)
+      if (count >= 10) {
+        setCount(0);
+        webglp.update();
+      }
     }
   }
 

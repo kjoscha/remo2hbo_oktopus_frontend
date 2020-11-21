@@ -51,25 +51,6 @@ export default ({ color, className, bioSignalValue, bioSignalType, bioSignalValu
                        data={signals['pulse']} label="pulse" />
 
 
-          <NumericSignal className="signal-ecg-0" color='green' fontSize='5em'
-                         data={signals['ECG0']} label="ECG0" />
-
-          <NumericSignal className="signal-ecg-1" color='green' fontSize='5em'
-                         data={signals['ECG1']} label="ECG1" />
-
-          <NumericSignal className="signal-pulse" color='red' fontSize='4em'
-                         data={signals['pulse']} label="pulse" />
-
-          <NumericSignal className="signal-bp" color='red' fontSize='3em'
-                         data={signals['BP']} label="BP" />
-
-          <NumericSignal className="signal-spo2" color='fuchsia' fontSize='4em'
-                         data={signals['spo2']} label="spO2" />
-
-          <NumericSignal className="signal-temp" color='white' fontSize='4em'
-                         data={signals['temp']} label="Temp" />
-
-
           <div className='signal-time' style={{ color: 'grey' }}>
             <p className="numeric-signal-value" style={{ fontSize: '1.5em' }}>Time: {new Date().toLocaleString()}</p>
           </div>
